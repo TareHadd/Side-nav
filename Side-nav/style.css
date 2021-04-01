@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+#main{
+    transition: 0.5s;
+}
+
+.ml-my{
+    margin-left: 200px;
+}
+/* If you want to make side nav bigger or smaller you shoud increase or decrease this margin */
+
+.navigation{
+    position: fixed;
+    width: 0;
+    height: 100%;
+    font-size: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.active{
+    width: 200px;
+    transition: 0.5s;
+    /* Here you can increase or decrease your side nav width or height */
+}
+
+.navigation ul{
+    width: 100%;
+    padding:0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation li{
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navigation li:hover{
+    background: rgba(14, 13, 13, 0.5);
+}
+
+.navigation a{
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.toggle{
+    position: relative;
+    display: flex;
+    /* Here with margins you can manage position of menu */
+    margin-right: auto;
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.toggle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('includes/images/menu.png') center no-repeat;
+}
+
+.toggle:hover{
+    background: rgba(214, 199, 111, 0.3);
+}
+
+
+
+@media screen and (max-width:600px){
+    .ml-my{
+        margin: 0;
+    }
+}
+
