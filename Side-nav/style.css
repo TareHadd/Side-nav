@@ -21,6 +21,7 @@ body{
 .navigation{
     position: fixed;
     width: 0;
+    top: 6%;
     height: 100%;
     font-size: 20px;
     transition: 0.5s;
@@ -30,6 +31,13 @@ body{
     width: 200px;
     transition: 0.5s;
     /* Here you can increase or decrease your side nav width or height */
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 94%;
 }
 
 .navigation ul{
@@ -96,5 +104,32 @@ body{
     .ml-my{
         margin: 0;
     }
+}
+
+@media screen and (max-height:600px){
+
+    .navigation{
+        position: fixed;
+        width: 0;
+        top: 10%;
+        height: 100%;
+        font-size: 20px;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .active{
+        width: 200px;
+        transition: 0.5s;
+        /* Here you can increase or decrease your side nav width or height */
+    }
+    
+    .navbar{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        bottom: 90%;
+    }
+    
 }
 
